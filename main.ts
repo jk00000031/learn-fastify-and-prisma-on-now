@@ -1,7 +1,8 @@
 import fastify from "fastify";
 import fastifyAutoload from "@fastify/autoload";
 import fastifyJwt from "@fastify/jwt";
-import { join } from "path";
+import {join} from "path";
+import {env} from "./utils/env";
 
 
 const server = fastify({
@@ -18,7 +19,7 @@ const server = fastify({
  * headers: { Authorization: "Bearer [Your Token]" }
  */
 server.register(fastifyJwt, {
-    secret: 'test'
+    secret: env('JWT_SECRET') as string
 });
 
 /** GitHub: https://github.com/fastify/fastify-autoload */
