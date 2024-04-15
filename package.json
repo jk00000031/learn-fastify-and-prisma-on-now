@@ -8,6 +8,7 @@
     "@fastify/jwt": "^8.0.0",
     "@prisma/client": "^5.12.1",
     "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
     "prisma": "^5.12.1",
     "ts-node": "^10.9.2"
   },
